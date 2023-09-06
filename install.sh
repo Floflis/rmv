@@ -52,7 +52,7 @@ if [ ! -f /usr/bin/rmoriginal ]; then
       echo "- Installing rm wrapper in /usr/bin..."
       sudo cp -f rm /usr/bin
       echo "- Turning rm wrapper into an executable..."
-      $maysudo chmod 755 /usr/bin/rm && $maysudo chmod +x /usr/bin/rm
+      sudo chmod 755 /usr/bin/rm && sudo chmod +x /usr/bin/rm
 #      break ;;
 #   *)
 #      echo "${invalid}" ;;
