@@ -4,7 +4,7 @@
 if ! command -v trash &> /dev/null
 then
     echo "trash-cli is not installed. Installing it now..."
-    sudo apt install trash-cli
+    sudo apt install trash-cli #Need to get 24,2 kB of archives. After this operation, 111 kB of additional disk space will be used.
 fi
 
 # Move the specified file(s) to the recycle bin using trash-cli
