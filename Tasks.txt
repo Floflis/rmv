@@ -1,5 +1,3 @@
-Like the "rm" command, but safer
-
 Options: default sends to "rmv" folder at recycle bin, and safer/safu sends to the recycle bin without being encased into a folder. The purpose of the default option is to clear the clutter when a lot of background tasks are using "rmv" without direct user input.
 
 Works as a replacing wrapper for rm
