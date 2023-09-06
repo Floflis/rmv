@@ -1,0 +1,83 @@
+#!/bin/bash
+nm="rmv"
+vs="r1"
+vcsversion="""
+        \e[1;42m $nm \e[0m\e[100m version $vs \e[0m
+"""
+#should get from config file in common with rmv
+
+#cd /usr/lib/floflis/browser/firedoge
+#./firefox
+
+# Only run normal git at commands unknown to 01's git wrapper
+#if [[ "$1" != "init" ]];then
+#if [[ "$2" != "-r" ]];then
+#if [[ "$1" != "unstage" ]];then
+#if [[ "$1" != "ass" ]];then
+#if [[ "$1" != "vommit" ]];then
+#/usr/bin/./gitoriginal "$@"
+#fi
+#fi
+#fi
+#fi
+#fi
+
+/usr/bin/./rmv "$@"
+
+# Use gix instead of git for initialize; thankfully gix always respect the "main" branch
+#if [[ "$1" = "init" ]];then
+#gix init
+#echo "Initialized empty Git repository in $(pwd)/.git/ (using 01 VCS+git wrapper+gix)"
+#gitoriginal config --global init.defaultBranch main
+#git wrapper: on every git init: git branch -m main
+#echo "Initializing git-meta for this brand new repository..."
+#bash /usr/lib/01/git-meta/init.sh
+#fi
+
+# add files/extensions recursively!
+#if [[ "$1" = "add" ]];then
+#if [[ "$2" = "-r" ]];then
+#if [[ "$3" != "" ]]
+#then
+#   gitoriginal ls-files -co --exclude-standard | grep '\'"$3"'$' | xargs gitoriginal add
+#https://stackoverflow.com/questions/2855140/recursively-add-files-by-pattern#comment2909387_2857909
+#else
+#   echo "Please tell what filename or extension (without \"*\") you want to add. Only one file per once."
+#fi
+#fi
+#fi
+
+# git need intuitive commands when users like me finds themselves in trouble, such as accidentaly adding files they shouldn't
+#if [[ "$1" = "unstage" ]];then
+#if [[ "$2" != "" ]]
+#then
+#   gitoriginal rm --cached "$@"
+#else
+#   echo "Please tell what files you want to unstage/not to include in the next commit."
+#fi
+#fi
+
+# traps for misspells
+#if [[ "$1" = "ass" ]];then
+#echo "Did you mean \"git add\"? If that's not what you mean, it may be the time to take a break of git..."
+#fi
+#if [[ "$1" = "vommit" ]];then
+#echo "Did you mean \"git commit\"? If that's not what you mean 🤢 it may be the time to take a break of git..."
+#fi
+
+# displays help message with a list of commands:
+#if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+#   echo "       git wrapper - \e[1;42m $nm $vs \e[0m"
+#   echo "Information:"
+#   echo "   --help, -h                  Shows all available commands"
+#   echo "Manage repo:"
+#   echo "   add -r <file/extension>     Add files/extensions recursively! Only one file per once."
+#   echo "   unstage                     Tell what files you want to unstage/not to include in the next commit."
+#   echo "------------------------------"
+#fi
+
+#if [ "$3" != "file:///usr/lib/floflis/browser/firedoge/defaults/firstpage/creatingprofile.html" ] || [ "$1" != "--flofirstuse" ];then
+#if /usr/lib/floflis/browser/firedoge/./powers.sh; then /usr/lib/floflis/browser/firedoge/./firefox $@; else exit 1; fi
+#else
+#   /usr/lib/floflis/browser/firedoge/./firefox $@
+#fi
