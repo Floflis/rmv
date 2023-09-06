@@ -1,3 +1,5 @@
-- sends to "rmv" folder at recycle bin
+- sends to "rmv" folder at recycle bin (are it even possible? a /tmp/rmv/self/rmv trick would mean lots of /rmv folders at recycle bin)
+- remember the last trashed file, and run trash-restore if user want to
+- more inspo: https://github.com/andreafrancia/trash-cli
 
 - Options: default sends to "rmv" folder at recycle bin, and safer/safu sends to the recycle bin without being encased into a folder. The purpose of the default option is to clear the clutter when a lot of background tasks are using "rmv" without direct user input.
