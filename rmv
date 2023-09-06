@@ -8,4 +8,6 @@ then
 fi
 
 # Move the specified file(s) to the recycle bin using trash-cli
+echo "Trashing $@..."
 trash "$@"
+echo "Finished trashing: $@"
